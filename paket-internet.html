@@ -1,36 +1,209 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
-   <!-- Meta Tags -->
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Paket Internet - Cio Network Solution</title>
-   <meta name="keywords"
-      content="isp, cio network solution, paket internet, wifi murah, fiber optic unlimited, harga wifi rumah">
-   <meta name="description"
-      content="Pilih kecepatan internet fiber optic yang sesuai untuk kebutuhan Anda. Paket Unlimited tanpa FUP dengan harga flat dan transparan.">
+   <meta name="keywords" content="isp, cio network solution, paket internet, wifi murah, fiber optic unlimited, harga wifi rumah, wifi voucher, paket home">
+   <meta name="description" content="Pilih kecepatan internet fiber optic yang sesuai untuk kebutuhan Anda. Paket Unlimited tanpa FUP dengan harga flat dan transparan.">
 
-   <!-- Bootstrap CSS -->
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-   <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <!-- Google Fonts - Plus Jakarta Sans -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet">
-   <!-- Style CSS -->
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/style.css">
-   <!-- Responsive CSS -->
    <link rel="stylesheet" href="css/responsive.css">
-   <!-- Favicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
+   <style>
+      body {
+         background-color: var(--bg-primary) !important;
+         color: var(--text-main) !important;
+      }
+
+      .custom-paket-wrapper {
+         padding: 160px 0 60px 0;
+         background: radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
+      }
+
+      /* Container Utama Halaman Paket */
+      .paket-page-section {
+         padding: 60px 0;
+         background: #ffffff;
+      }
+
+      .paket-page-section-alt {
+         padding: 80px 0;
+         background-color: var(--bg-secondary) !important;
+         border-top: 1px solid var(--border-card);
+      }
+
+      /* Desain Card Pricing Baru yang Terisolasi */
+      .custom-pricing-card {
+         background: #ffffff !important;
+         border: 1px solid rgba(148, 163, 184, 0.2) !important;
+         border-radius: 20px !important;
+         padding: 40px 30px !important;
+         box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+         transition: all 0.3s ease-in-out !important;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         text-align: left !important;
+      }
+
+      .custom-pricing-card:hover {
+         border-color: var(--accent-blue) !important;
+         box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08) !important;
+         transform: translateY(-5px);
+      }
+
+      /* Penanda Rekomendasi */
+      .custom-pricing-card.featured-style {
+         border-color: rgba(37, 99, 235, 0.4) !important;
+         background: linear-gradient(180deg, rgba(37, 99, 235, 0.02) 0%, #ffffff 100%) !important;
+      }
+
+      .custom-pricing-card .badge-top {
+         position: absolute;
+         top: 20px;
+         right: 25px;
+         background: var(--gradient-primary);
+         color: #ffffff;
+         font-size: 11px;
+         font-weight: 700;
+         padding: 4px 12px;
+         border-radius: 30px;
+         text-transform: uppercase;
+      }
+
+      /* Reset Tipografi di Dalam Card agar Rata Kiri */
+      .card-title-head {
+         font-size: 26px;
+         font-weight: 800;
+         color: #0f172a !important;
+         margin-bottom: 4px;
+         text-align: left !important;
+      }
+
+      .card-sub-head {
+         color: #64748b !important;
+         font-size: 14px;
+         margin-bottom: 20px;
+         text-align: left !important;
+      }
+
+      .price-box-layout {
+         display: flex;
+         align-items: baseline;
+         margin-bottom: 15px;
+         text-align: left !important;
+      }
+
+      .price-box-layout .currency-symbol {
+         font-size: 22px;
+         font-weight: 700;
+         color: var(--accent-blue);
+         margin-right: 4px;
+      }
+
+      .price-box-layout .amount-value {
+         font-size: 46px;
+         font-weight: 800;
+         color: #0f172a;
+         line-height: 1;
+      }
+
+      .price-box-layout .per-period {
+         font-size: 15px;
+         color: #64748b;
+         margin-left: 6px;
+         font-weight: 500;
+      }
+
+      /* Memperbaiki Bullet List yang Berantakan di Gambar */
+      .feature-list-clean {
+         list-style: none !important;
+         padding: 0 !important;
+         margin: 25px 0 0 0 !important;
+         text-align: left !important;
+      }
+
+      .feature-list-clean li {
+         position: relative !important;
+         padding-left: 30px !important;
+         margin-bottom: 14px !important;
+         font-size: 14.5px !important;
+         line-height: 1.5 !important;
+         color: #334155 !important;
+         text-align: left !important;
+      }
+
+      .feature-list-clean li i {
+         position: absolute !important;
+         left: 0 !important;
+         top: 3px !important;
+         font-size: 16px !important;
+         display: inline-block !important;
+      }
+
+      .divider-line {
+         border-top: 1px solid rgba(148, 163, 184, 0.15);
+         margin: 25px 0 20px 0;
+      }
+
+      /* Card Komparasi Kelebihan & Kekurangan */
+      .comparison-clean-card {
+         background: #ffffff;
+         border: 1px solid rgba(148, 163, 184, 0.15);
+         border-radius: 20px;
+         padding: 35px 30px;
+         height: 100%;
+         box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+         text-align: left !important;
+      }
+
+      .box-info-wrapper {
+         background: #f8fafc;
+         border: 1px solid rgba(148, 163, 184, 0.1);
+         border-radius: 12px;
+         padding: 20px;
+         margin-bottom: 20px;
+      }
+
+      .box-info-wrapper:last-child {
+         margin-bottom: 0;
+      }
+
+      .indicator-title {
+         font-weight: 700;
+         font-size: 15px;
+         margin-bottom: 12px;
+         padding-left: 10px;
+         text-align: left !important;
+      }
+
+      .indicator-title.pos { border-left: 3px solid #10b981; color: #0f172a; }
+      .indicator-title.neg { border-left: 3px solid #ef4444; color: #0f172a; }
+
+      .btn-holder-card {
+         margin-top: 30px;
+         width: 100%;
+      }
+      
+      .text-success { color: #10b981 !important; }
+      .text-primary { color: #2563eb !important; }
+      .text-danger { color: #ef4444 !important; }
+   </style>
 </head>
 
 <body>
-   <!-- Modern Navbar -->
    <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
       <div class="container">
          <a class="navbar-brand" href="index.html">
@@ -63,381 +236,199 @@
                </li>
             </ul>
             <div class="nav-cta">
-               <a href="kontak.html" class="btn btn-gradient-glow nav-btn">Hubungi Kami</a>
+               <a href="https://wa.me/6285324780031" target="_blank" class="btn btn-gradient-glow nav-btn">Hubungi Kami</a>
             </div>
          </div>
       </div>
    </nav>
 
-   <!-- Page Header -->
-   <section class="hero-section" style="min-height: auto; padding: 140px 0 60px 0;">
-      <div class="hero-shapes">
-         <div class="shape-glow glow-2" style="width: 250px; height: 250px;"></div>
-      </div>
+   <div class="custom-paket-wrapper">
       <div class="container">
          <div class="row">
-            <div class="col-lg-8 hero-content text-left">
-               <span class="badge badge-indigo mb-3">Layanan & Harga</span>
-               <h1 class="hero-title" style="font-size: 44px; margin-bottom: 15px;">Daftar <span>Paket Internet</span>
-               </h1>
-               <p class="hero-desc">Pilih kecepatan internet terbaik yang stabil dan flat tanpa FUP untuk rumah,
-                  apartemen, toko, maupun kantor Anda.</p>
+            <div class="col-lg-8 text-left">
+               <span class="badge badge-indigo mb-3">Pilihan Terbaik Resmi</span>
+               <h1 class="hero-title" style="font-size: 46px; margin-bottom: 15px; font-weight: 800; text-align: left;">Daftar <span>Paket Internet</span></h1>
+               <p class="hero-desc" style="text-align: left;">Pilih kecepatan internet terbaik yang stabil tanpa batas kuota pemakaian untuk kebutuhan harian, hiburan keluarga, hingga bisnis Anda.</p>
             </div>
          </div>
       </div>
-   </section>
+   </div>
 
-   <!-- Pricing Cards Section -->
-   <section class="about-section layout_padding py-5">
+   <section class="paket-page-section">
       <div class="container">
-         <div class="section-header text-center mb-5">
-            <span class="badge badge-indigo mb-2">Kategori Kecepatan Utama</span>
-            <h2 class="section-title">Paket Internet Rumah & Bisnis</h2>
+         <div class="text-center mb-5">
+            <span class="badge badge-indigo mb-2">Kategori Paket Resmi</span>
+            <h2 style="font-weight: 800; color: #0f172a; font-size: 32px; margin-top: 5px;">Pilih Jenis Paket Internet Anda</h2>
+            <p style="color: #64748b; max-width: 600px; margin: 8px auto 0 auto;">Tersedia Paket Home Bulanan tanpa ribet dan Paket Voucher fleksibel per perangkat sesuai kebutuhan Anda.</p>
          </div>
 
          <div class="row justify-content-center align-items-stretch">
-            <!-- Paket Hemat (5 Mbps) -->
-            <div class="col-md-4 mb-4">
-               <div class="pricing-card glass-card">
-                  <div class="pricing-header">
-                     <h3 class="plan-name">Paket Hemat</h3>
-                     <p class="plan-desc">Cocok untuk sosmed & browsing ringan.</p>
-                     <div class="price-wrapper">
-                        <span class="currency">Rp</span>
-                        <span class="price-value">100k</span>
-                        <span class="period">/bulan</span>
+
+            <div class="col-md-6 col-lg-5 mb-4 d-flex">
+               <div class="custom-pricing-card featured-style">
+                  <span class="badge-top">Rekomendasi</span>
+                  <div>
+                     <h3 class="card-title-head">PAKET HOME</h3>
+                     <p class="card-sub-head">Solusi internet rumah andalan keluarga.</p>
+                     
+                     <div class="price-box-layout">
+                        <span class="currency-symbol">Rp</span>
+                        <span class="amount-value">150.000</span>
+                        <span class="per-period">/bulan</span>
                      </div>
-                  </div>
-                  <div class="pricing-body">
-                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan hingga <b>5 Mbps</b></li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> 100% Fiber Optic</li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Tanpa Batas FUP</li>
+                     
+                     <p class="mt-2 text-primary" style="font-weight: 700; font-size: 15px; margin-bottom: 2px; text-align: left;">Up To 30Mbps Hanya 150.000</p>
+                     <p style="color: #64748b; font-size: 13px; font-weight: 500; margin-bottom: 20px; text-align: left;">Kecepatan Streaming Hingga 30Mb/detik</p>
+                     
+                     <ul class="feature-list-clean">
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Rekomendasi Kualitas Streaming di 720 HD Hingga max 1080 Full HD</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> (Youtube, Tiktok, Instagram, Facebook, Netflix, Live streaming) Minim Loading/Minim Lag/Minim Buffering</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan Unduh/Unggah Hingga 3.75 Mb/detik</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Ideal pemakaian 1 - 6 Perangkat</li>
+                     </ul>
+                     
+                     <div class="divider-line"></div>
+                     
+                     <p style="font-weight: 700; color: #0f172a; font-size: 14px; margin-bottom: 10px; text-align: left;">Keuntungan Tambahan:</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Alat dipinjamkan selama berlangganan</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Pakai dulu, baru bayar bulan depan</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Gratis Biaya Pemasangan</li>
                      </ul>
                   </div>
-                  <div class="pricing-footer text-center">
-                     <a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Hemat%205%20Mbps."
-                        target="_blank" class="btn btn-outline-indigo w-100">Daftar</a>
+                  <div class="btn-holder-card">
+                     <a href="https://wa.me/6285700180302?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Home%20Up%20To%2030Mbps%20Hanya%20150.000." target="_blank" class="btn btn-gradient-glow w-100 py-3">HUBUNGI SEKARANG</a>
                   </div>
                </div>
             </div>
 
-            <!-- Paket Standar (10 Mbps) -->
-            <div class="col-md-4 mb-4">
-               <div class="pricing-card glass-card featured">
-                  <span class="card-badge">Paling Populer</span>
-                  <div class="pricing-header">
-                     <h3 class="plan-name">Paket Standar</h3>
-                     <p class="plan-desc">Pilihan utama untuk keluarga kecil & WFH.</p>
-                     <div class="price-wrapper">
-                        <span class="currency">Rp</span>
-                        <span class="price-value">150k</span>
-                        <span class="period">/bulan</span>
+            <div class="col-md-6 col-lg-5 mb-4 d-flex">
+               <div class="custom-pricing-card">
+                  <div>
+                     <h3 class="card-title-head">PAKET VOUCHER</h3>
+                     <p class="card-sub-head">Sistem voucher fleksibel, hemat & praktis.</p>
+                     
+                     <div class="price-box-layout">
+                        <span class="currency-symbol">Rp</span>
+                        <span class="amount-value">4.000</span>
+                        <span class="per-period">/24 jam</span>
                      </div>
-                  </div>
-                  <div class="pricing-body">
-                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan hingga <b>10 Mbps</b></li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> 100% Fiber Optic</li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Tanpa Batas FUP</li>
+                     
+                     <p class="mt-2 text-primary" style="font-weight: 700; font-size: 15px; margin-bottom: 2px; text-align: left;">1 Voucher 1 Perangkat Up to 20 Mbps</p>
+                     <p style="color: #64748b; font-size: 13px; font-weight: 500; margin-bottom: 15px; text-align: left;">Kecepatan Streaming Hingga 20 Mb/detik</p>
+                     
+                     <div class="voucher-duration-list">
+                        <div class="voucher-duration-item"><i class="fa-solid fa-clock text-primary mr-1" style="font-size: 12px;"></i> Opsi 1 Hari (24 Jam): Tersedia</div>
+                        <div class="voucher-duration-item crossed"><i class="fa-solid fa-clock text-muted mr-1" style="font-size: 12px;"></i> Opsi 7 Hari:<span class="status-unavailable">belum tersedia</span></div>
+                        <div class="voucher-duration-item crossed"><i class="fa-solid fa-clock text-muted mr-1" style="font-size: 12px;"></i> Opsi 30 Hari:<span class="status-unavailable">belum tersedia</span></div>
+                     </div>
+
+                     <ul class="feature-list-clean" style="margin-top: 15px !important;">
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Harga paket terjangkau untuk kebutuhan harian, pembelian voucher bisa langsung lewat agen terdekat / online</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Tanpa dipungut biaya pemasangan, tinggal koneksikan gadget Anda ke sinyal hotspot terdekat</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Rekomendasi Kualitas Streaming di 720 HD Hingga max 1080 Full HD</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> (Youtube, Tiktok, Instagram, Facebook, Netflix, Live streaming) Kecepatan Lancar Minim Buffering</li>
+                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan Unduh/Unggah Hingga 2,5 Mb/detik</li>
+                     </ul>
+                     
+                     <div class="divider-line"></div>
+                     
+                     <p style="font-weight: 700; color: #0f172a; font-size: 14px; margin-bottom: 10px; text-align: left;">Keuntungan Tambahan:</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Infrastruktur stabil berbasis fiber optik</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Sistem beli mandiri tanpa ikatan tagihan</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Bebas kuota pemakaian (True Unlimited)</li>
                      </ul>
                   </div>
-                  <div class="pricing-footer text-center">
-                     <a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Standar%2010%20Mbps."
-                        target="_blank" class="btn btn-gradient-glow w-100">Daftar</a>
+                  <div class="btn-holder-card">
+                     <a href="https://wa.me/6285700180302?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Voucher%20Up%20to%2020%20Mbps." target="_blank" class="btn btn-outline-indigo w-100 py-3" style="border: 2px solid var(--accent-blue); color: var(--accent-blue); font-weight: 700; background: transparent; border-radius: 10px;">HUBUNGI SEKARANG</a>
                   </div>
                </div>
             </div>
 
-            <!-- Paket Premium (20 Mbps) -->
-            <div class="col-md-4 mb-4">
-               <div class="pricing-card glass-card">
-                  <div class="pricing-header">
-                     <h3 class="plan-name">Paket Premium</h3>
-                     <p class="plan-desc">Bebas lag untuk Streaming HD & Gaming.</p>
-                     <div class="price-wrapper">
-                        <span class="currency">Rp</span>
-                        <span class="price-value">250k</span>
-                        <span class="period">/bulan</span>
-                     </div>
-                  </div>
-                  <div class="pricing-body">
-                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan hingga <b>20 Mbps</b></li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> 100% Fiber Optic</li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Tanpa Batas FUP</li>
-                     </ul>
-                  </div>
-                  <div class="pricing-footer text-center">
-                     <a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Premium%2020%20Mbps."
-                        target="_blank" class="btn btn-outline-indigo w-100">Daftar</a>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Paket Ultimate (30 Mbps) - Tengah bawah -->
-            <div class="col-md-4 mb-4">
-               <div class="pricing-card glass-card">
-                  <div class="pricing-header">
-                     <h3 class="plan-name">Paket Ultimate</h3>
-                     <p class="plan-desc">Kecepatan tinggi untuk banyak perangkat.</p>
-                     <div class="price-wrapper">
-                        <span class="currency">Rp</span>
-                        <span class="price-value">300k</span>
-                        <span class="period">/bulan</span>
-                     </div>
-                  </div>
-                  <div class="pricing-body">
-                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Kecepatan hingga <b>30 Mbps</b></li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> 100% Fiber Optic</li>
-                        <li><i class="fa-solid fa-circle-check text-primary"></i> Tanpa Batas FUP</li>
-                     </ul>
-                  </div>
-                  <div class="pricing-footer text-center">
-                     <a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network%20Solution,%20saya%20tertarik%20dengan%20Paket%20Ultimate%2030%20Mbps."
-                        target="_blank" class="btn btn-outline-indigo w-100">Daftar</a>
-                  </div>
-               </div>
-            </div>
          </div>
       </div>
    </section>
 
-   <!-- Searchable Area Tables Section -->
-   <section class="pricing-section layout_padding py-5">
+   <section class="paket-page-section-alt">
       <div class="container">
-         <div class="section-header text-center mb-5">
-            <span class="badge badge-indigo mb-2">Cari Tarif Berdasarkan Wilayah</span>
-            <h2 class="section-title">Daftar Lengkap Tarif Per Wilayah</h2>
-            <p class="section-subtitle mx-auto">Masukkan nama daerah/desa Anda pada kotak pencarian di bawah untuk
-               melihat pilihan paket yang tersedia.</p>
+         <div class="text-center mb-5">
+            <span class="badge badge-indigo mb-2">Panduan Perbandingan</span>
+            <h2 style="font-weight: 800; color: #0f172a; font-size: 32px; margin-top: 5px;">Kelebihan & Kekurangan<br>Wifi Voucher vs Bulanan</h2>
+            <p style="color: #64748b; max-width: 600px; margin: 8px auto 0 auto;">Pelajari karakteristik detail masing-masing sistem layanan agar sesuai dengan kriteria pemakaian Anda.</p>
          </div>
 
-         <div class="row justify-content-center">
-            <div class="col-lg-10">
-               <!-- Search Box Input -->
-               <div class="form-group mb-4">
-                  <input type="text" id="search-wilayah" class="form-control-custom py-3 px-4 shadow-sm"
-                     placeholder="Cari nama wilayah Anda... (contoh: Garut, Cikitu, Girimulya, Cinanggela, Cibeureum)"
-                     style="border-radius: 10px; font-size: 16px; border: 1px solid var(--accent-blue);">
-               </div>
+         <div class="row align-items-stretch">
+            <div class="col-md-6 mb-4 d-flex">
+               <div class="comparison-clean-card">
+                  <h3 class="mb-4 text-center" style="font-size: 22px; font-weight: 800; color: var(--accent-blue);"><i class="fa-solid fa-ticket mr-2"></i> Wifi Voucher</h3>
 
-               <!-- Table Rates -->
-               <div class="table-responsive glass-card p-3 shadow-sm">
-                  <table class="table table-hover" id="paket-table">
-                     <thead>
-                        <tr>
-                           <th>Nama Wilayah / Layanan</th>
-                           <th>Kecepatan</th>
-                           <th>Harga Per Bulan</th>
-                           <th>Status / Keterangan</th>
-                           <th>Aksi</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td><strong>Garut</strong></td>
-                           <td>15 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 100.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2015Mbps%20Rp100.000%20di%20Garut."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Garut</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Garut."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Garut</strong></td>
-                           <td>30 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited (Promo)</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2030Mbps%20Rp150.000%20di%20Garut."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Cikitu</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Cikitu."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Faynet</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Faynet."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Gita</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Gita."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Girimulya</strong></td>
-                           <td>5 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 100.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%205Mbps%20Rp100.000%20di%20Girimulya."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Girimulya</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Girimulya."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Girimulya</strong></td>
-                           <td>20 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 250.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2020Mbps%20Rp250.000%20di%20Girimulya."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Girimulya</strong></td>
-                           <td>30 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 300.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2030Mbps%20Rp300.000%20di%20Girimulya."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Cinanggela</strong></td>
-                           <td>5 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 100.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%205Mbps%20Rp100.000%20di%20Cinanggela."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Cinanggela</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Cinanggela."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Cibeureum</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 165.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp165.000%20di%20Cibeureum."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>Padudumgl</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000%20di%20Padudumgl."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>CioNetwork (Umum)</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 150.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2010Mbps%20Rp150.000."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>CioNetwork (Umum)</strong></td>
-                           <td>20 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Rp 250.000</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20ingin%20pasang%20paket%2020Mbps%20Rp250.000."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>CioNetwork Bypass</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Hubungi Sales</span></td>
-                           <td><span class="badge badge-info"
-                                 style="background: rgba(59, 130, 246, 0.08); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">Bypass
-                                 / Dedicated</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20tertarik%20dengan%20paket%2010MB%20Cionetwork%20Bypass."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                        <tr>
-                           <td><strong>CioNetwork Unlimited</strong></td>
-                           <td>10 Mbps</td>
-                           <td><span class="text-primary font-weight-bold">Hubungi Sales</span></td>
-                           <td><span class="badge badge-success"
-                                 style="background: rgba(16, 185, 129, 0.08); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">True
-                                 Unlimited</span></td>
-                           <td><a href="https://wa.me/6281234567890?text=Halo%20Cio%20Network,%20saya%20tertarik%20dengan%20paket%2010MB%20Rp%20Unlimited."
-                                 target="_blank" class="btn btn-gradient-glow btn-sm">Pesan</a></td>
-                        </tr>
-                     </tbody>
-                  </table>
+                  <div class="box-info-wrapper">
+                     <p class="indicator-title pos">Kelebihan</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Kecepatan up to 20Mbps untuk 1 perangkat</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Tanpa batas kuota pemakaian (True Unlimited)</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Jangkauan luas antar router hotspot bisa saling terhubung selama ada sinyal</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Tidak ada tagihan bulanan flat, beli voucher saat butuh saja</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> 100% didukung jaringan kabel fiber optik murni</li>
+                     </ul>
+                  </div>
+
+                  <div class="box-info-wrapper">
+                     <p class="indicator-title neg">Kekurangan</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> 1 kode voucher hanya untuk 1 perangkat aktif</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Tidak bisa digunakan untuk tethering/hotspot hp</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Kode kadang keluar otomatis, simpan catatan kode hingga masa habis</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Memiliki limitasi durasi pemicu (misal 24 jam)</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Terbatas pada perangkat TV pintar tertentu</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-6 mb-4 d-flex">
+               <div class="comparison-clean-card">
+                  <h3 class="mb-4 text-center" style="font-size: 22px; font-weight: 800; color: var(--accent-blue);"><i class="fa-solid fa-house-signal mr-2"></i> Wifi Bulanan</h3>
+
+                  <div class="box-info-wrapper">
+                     <p class="indicator-title pos">Kelebihan</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Tanpa batas kuota pemakaian bulanan (Tanpa FUP)</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Lebih praktis tanpa perlu input kode voucher harian</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Tidak ada batasan jumlah perangkat terhubung ke router</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> 100% menggunakan infrastruktur fiber optik berkecepatan tinggi</li>
+                        <li><i class="fa-solid fa-circle-check text-success"></i> Smart TV atau Android TV bisa terhubung langsung dengan mudah</li>
+                     </ul>
+                  </div>
+
+                  <div class="box-info-wrapper">
+                     <p class="indicator-title neg">Kekurangan</p>
+                     <ul class="feature-list-clean" style="margin-top: 0 !important;">
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Kecepatan terbagi rata berdasarkan jumlah gadget yang terhubung aktif</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Jangkauan sinyal wifi terbatas area internal 1 bangunan/rumah</li>
+                        <li><i class="fa-solid fa-circle-xmark text-danger"></i> Keamanan password perlu dijaga agar tidak discan barcode sembarangan</li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
    </section>
 
-   <!-- Footer Section -->
    <footer class="footer-section">
       <div class="container">
          <div class="row py-5">
             <div class="col-lg-4 mb-4 mb-lg-0">
                <h3 class="footer-brand"><span class="logo-cio">CIO</span><span class="logo-net"> Network Solution</span></h3>
-               <p class="footer-desc mt-3">Penyedia layanan internet berbasis serat optik generasi terbaru yang
-                  menghadirkan kecepatan tinggi, stabil, tanpa batas FUP, dan terjangkau.</p>
+               <p class="footer-desc mt-3">Penyedia layanan internet berbasis serat optik generasi terbaru yang menghadirkan kecepatan tinggi, stabil, tanpa batas FUP, dan terjangkau.</p>
                <div class="footer-social mt-4">
                   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                </div>
+               <p class="footer-desc mt-3" style="font-size: 13px; opacity: 0.8;"><i class="fa-solid fa-user" style="margin-right: 6px;"></i> Owner: <strong>Yoga Ogawa Rhobiyana</strong></p>
             </div>
             <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                <h4 class="footer-title">Tautan Pintar</h4>
@@ -460,8 +451,8 @@
             <div class="col-lg-3 col-md-4">
                <h4 class="footer-title">Hubungi Kami</h4>
                <ul class="footer-contact">
-                  <li><i class="fa-solid fa-location-dot"></i> Jl. Raya Utama No. 88, Kembangan, Jakarta Barat</li>
-                  <li><i class="fa-solid fa-phone"></i> +62 812-3456-7890</li>
+                  <li><i class="fa-solid fa-location-dot"></i> Jl. Bojong Jl. Toha Ramdan, Ciparay, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381</li>
+                  <li><i class="fa-solid fa-phone"></i> +62 853-2478-0031</li>
                   <li><i class="fa-solid fa-envelope"></i> cs@cionetwork.id</li>
                </ul>
             </div>
@@ -472,6 +463,7 @@
          <div class="row py-4 align-items-center">
             <div class="col-md-6 text-center text-md-left">
                <p class="copyright-text mb-0">&copy; 2026 Cio Network Solution. Semua Hak Dilindungi Undang-Undang.</p>
+               <p class="copyright-text mb-0" style="margin-top: 4px; opacity: 0.75;">Owner: Yoga Ogawa Rhobiyana</p>
             </div>
             <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
                <p class="theme-author mb-0">Dibuat secara profesional dengan estetika modern.</p>
@@ -480,19 +472,16 @@
       </div>
    </footer>
 
-   <!-- Back to Top Button -->
    <div id="back-to-top" class="back-to-top-btn">
       <i class="fa-solid fa-arrow-up"></i>
    </div>
 
-   <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
    <script src="js/jquery.validate.js"></script>
 
-   <!-- Custom search and scroll script -->
    <script>
       $(document).ready(function () {
          $(window).on('scroll', function () {
@@ -517,14 +506,6 @@
 
          $('.navbar-toggler').on('click', function () {
             $(this).toggleClass('open');
-         });
-
-         // Live Table Filter script
-         $("#search-wilayah").on("keyup", function () {
-            var value = $(this).val().toLowerCase();
-            $("#paket-table tbody tr").filter(function () {
-               $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
          });
       });
    </script>

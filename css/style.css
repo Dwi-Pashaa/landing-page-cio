@@ -1177,3 +1177,370 @@ div.help-block {
       font-size: 13px;
    }
 }
+
+/* CSS Terisolasi Halaman Beranda */
+.home-paket-section {
+   background-color: var(--bg-secondary) !important;
+}
+.home-grid-container {
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+}
+.home-card-paket {
+   background: #ffffff !important;
+   border: 1px solid rgba(148, 163, 184, 0.2) !important;
+   border-radius: 20px !important;
+   padding: 40px 30px !important;
+   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   text-align: left !important;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.home-card-paket:hover {
+   border-color: var(--accent-blue) !important;
+   box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08) !important;
+   transform: translateY(-5px);
+   transition: all 0.3s ease-in-out;
+}
+.home-card-paket.featured-style {
+   border-color: rgba(37, 99, 235, 0.4) !important;
+   background: linear-gradient(180deg, rgba(37, 99, 235, 0.02) 0%, #ffffff 100%) !important;
+}
+.home-card-paket .badge-rekomendasi {
+   position: absolute;
+   top: 20px;
+   right: 25px;
+   background: var(--gradient-primary);
+   color: #ffffff;
+   font-size: 11px;
+   font-weight: 700;
+   padding: 4px 12px;
+   border-radius: 30px;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+.home-card-paket h3 {
+   font-size: 26px;
+   font-weight: 800;
+   color: #0f172a !important;
+   margin-bottom: 4px;
+   text-align: left !important;
+   letter-spacing: -0.5px;
+}
+.home-card-paket .sub-plan {
+   color: #64748b !important;
+   font-size: 14px;
+   margin-bottom: 20px;
+   text-align: left !important;
+}
+.home-price-box {
+   display: flex;
+   align-items: baseline;
+   margin-bottom: 15px;
+   text-align: left !important;
+   justify-content: flex-start;
+}
+.home-price-box .currency {
+   font-size: 22px;
+   font-weight: 700;
+   color: var(--accent-blue);
+   margin-right: 4px;
+}
+.home-price-box .amount {
+   font-size: 46px;
+   font-weight: 800;
+   color: #0f172a;
+   line-height: 1;
+}
+.home-price-box .period {
+   font-size: 15px;
+   color: #64748b;
+   margin-left: 6px;
+   font-weight: 500;
+}
+.home-card-paket .highlight-text {
+   font-weight: 700;
+   font-size: 15px;
+   margin-bottom: 2px;
+   text-align: left !important;
+}
+.home-card-paket .sub-highlight {
+   color: #64748b;
+   font-size: 13px;
+   font-weight: 500;
+   margin-bottom: 0;
+   text-align: left !important;
+}
+
+.home-voucher-durations {
+   margin-bottom: 15px;
+}
+.home-duration-row {
+   font-size: 14px;
+   color: #475569;
+   margin-bottom: 6px;
+   font-weight: 500;
+   text-align: left !important;
+}
+.home-duration-row.disabled {
+   text-decoration: line-through;
+   color: #94a3b8;
+}
+.home-duration-row .label-not-ready {
+   color: #ef4444;
+   font-weight: 700;
+   font-size: 12px;
+   background: rgba(239, 68, 68, 0.08);
+   padding: 2px 8px;
+   border-radius: 6px;
+   margin-left: 6px;
+   text-transform: uppercase;
+   display: inline-block;
+}
+
+.home-list-fitur {
+   list-style: none !important;
+   padding: 0 !important;
+   margin: 25px 0 0 0 !important;
+   text-align: left !important;
+}
+.home-list-fitur li {
+   position: relative !important;
+   padding-left: 30px !important;
+   margin-bottom: 14px !important;
+   font-size: 14.5px !important;
+   line-height: 1.5 !important;
+   color: #334155 !important;
+   text-align: left !important;
+}
+.home-list-fitur li i {
+   position: absolute !important;
+   left: 0 !important;
+   top: 3px !important;
+   font-size: 16px !important;
+}
+.home-card-paket .divider {
+   border-top: 1px solid rgba(148, 163, 184, 0.15);
+   margin: 25px 0 20px 0;
+}
+.home-card-paket .title-tambahan {
+   font-weight: 700;
+   color: #0f172a;
+   font-size: 14px;
+   margin-bottom: 10px;
+   text-align: left !important;
+}
+.home-card-paket .action-wrapper {
+   margin-top: 30px;
+   width: 100%;
+}
+.home-card-paket .btn-outline-custom {
+   border: 2px solid var(--accent-blue);
+   color: var(--accent-blue);
+   font-weight: 700;
+   background: transparent;
+   border-radius: 10px;
+}
+
+/* CSS Terisolasi - Menjamin Rata Kiri & Simetris */
+.custom-paket-wrapper {
+   padding: 160px 0 60px 0;
+   background: radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
+}
+
+.paket-page-section {
+   padding: 60px 0;
+   background: #ffffff;
+}
+
+.paket-page-section-alt {
+   padding: 80px 0;
+   background-color: var(--bg-secondary) !important;
+   border-top: 1px solid var(--border-card);
+}
+
+.custom-pricing-card {
+   background: #ffffff !important;
+   border: 1px solid rgba(148, 163, 184, 0.2) !important;
+   border-radius: 20px !important;
+   padding: 40px 30px !important;
+   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+   transition: all 0.3s ease-in-out !important;
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: left !important;
+}
+
+.custom-pricing-card:hover {
+   border-color: var(--accent-blue) !important;
+   box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08) !important;
+   transform: translateY(-5px);
+}
+
+.custom-pricing-card.featured-style {
+   border-color: rgba(37, 99, 235, 0.4) !important;
+   background: linear-gradient(180deg, rgba(37, 99, 235, 0.02) 0%, #ffffff 100%) !important;
+}
+
+.custom-pricing-card .badge-top {
+   position: absolute;
+   top: 20px;
+   right: 25px;
+   background: var(--gradient-primary);
+   color: #ffffff;
+   font-size: 11px;
+   font-weight: 700;
+   padding: 4px 12px;
+   border-radius: 30px;
+   text-transform: uppercase;
+}
+
+.card-title-head {
+   font-size: 26px;
+   font-weight: 800;
+   color: #0f172a !important;
+   margin-bottom: 4px;
+   text-align: left !important;
+}
+
+.card-sub-head {
+   color: #64748b !important;
+   font-size: 14px;
+   margin-bottom: 20px;
+   text-align: left !important;
+}
+
+.price-box-layout {
+   display: flex;
+   align-items: baseline;
+   margin-bottom: 15px;
+   text-align: left !important;
+}
+
+.price-box-layout .currency-symbol {
+   font-size: 22px;
+   font-weight: 700;
+   color: var(--accent-blue);
+   margin-right: 4px;
+}
+
+.price-box-layout .amount-value {
+   font-size: 46px;
+   font-weight: 800;
+   color: #0f172a;
+   line-height: 1;
+}
+
+.price-box-layout .per-period {
+   font-size: 15px;
+   color: #64748b;
+   margin-left: 6px;
+   font-weight: 500;
+}
+
+.voucher-duration-list {
+   margin-bottom: 15px;
+}
+.voucher-duration-item {
+   font-size: 14px;
+   color: #475569;
+   margin-bottom: 6px;
+   font-weight: 500;
+   text-align: left !important;
+}
+.voucher-duration-item .status-unavailable {
+   color: #ef4444;
+   font-weight: 700;
+   font-size: 12px;
+   background: rgba(239, 68, 68, 0.08);
+   padding: 2px 8px;
+   border-radius: 6px;
+   margin-left: 6px;
+   text-transform: uppercase;
+   display: inline-block;
+}
+.voucher-duration-item.crossed {
+   text-decoration: line-through;
+   color: #94a3b8;
+}
+
+.feature-list-clean {
+   list-style: none !important;
+   padding: 0 !important;
+   margin: 25px 0 0 0 !important;
+   text-align: left !important;
+}
+
+.feature-list-clean li {
+   position: relative !important;
+   padding-left: 30px !important;
+   margin-bottom: 14px !important;
+   font-size: 14.5px !important;
+   line-height: 1.5 !important;
+   color: #334155 !important;
+   text-align: left !important;
+}
+
+.feature-list-clean li i {
+   position: absolute !important;
+   left: 0 !important;
+   top: 3px !important;
+   font-size: 16px !important;
+   display: inline-block !important;
+}
+
+.divider-line {
+   border-top: 1px solid rgba(148, 163, 184, 0.15);
+   margin: 25px 0 20px 0;
+}
+
+.comparison-clean-card {
+   background: #ffffff;
+   border: 1px solid rgba(148, 163, 184, 0.15);
+   border-radius: 20px;
+   padding: 35px 30px;
+   height: 100%;
+   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+   text-align: left !important;
+}
+
+.box-info-wrapper {
+   background: #f8fafc;
+   border: 1px solid rgba(148, 163, 184, 0.1);
+   border-radius: 12px;
+   padding: 20px;
+   margin-bottom: 20px;
+}
+
+.box-info-wrapper:last-child {
+   margin-bottom: 0;
+}
+
+.indicator-title {
+   font-weight: 700;
+   font-size: 15px;
+   margin-bottom: 12px;
+   padding-left: 10px;
+   text-align: left !important;
+}
+
+.indicator-title.pos { border-left: 3px solid #10b981; color: #0f172a; }
+.indicator-title.neg { border-left: 3px solid #ef4444; color: #0f172a; }
+
+.btn-holder-card {
+   margin-top: 30px;
+   width: 100%;
+}
+
+.text-success { color: #10b981 !important; }
+.text-primary { color: #2563eb !important; }
+.text-danger { color: #ef4444 !important; }
